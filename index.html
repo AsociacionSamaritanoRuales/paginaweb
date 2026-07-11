@@ -1,20 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-
-<title>Asociación Samaritano Ruales</title>
-
+  <meta charset="UTF-8">
+  <title>Asociación Samaritano Ruales</title>
+  <!-- Metadatos para SEO y responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Asociación Samaritano Ruales: Comunidad terapéutica con modelo Daytop, 21 años de servicio, servicios y contacto.">
+  <meta name="author" content="Asociación Samaritano Ruales">
+  <link rel="stylesheet" href="style.css">
+  <!-- Icono de pestaña (favicon) opcional -->
+  <link rel="icon" href="img/logo.png" type="image/png">
 </head>
-
 <body>
 
-<h1>Asociación Samaritano Ruales</h1>
+  <!-- Menú de navegación fijo -->
+  <header>
+    <nav id="navbar" class="topnav">
+      <a href="#inicio" class="logo"><img src="img/logo.png" alt="Logo Samaritano Ruales"></a>
+      <a href="#inicio">Inicio</a>
+      <a href="#quienes">Quiénes somos</a>
+      <a href="#historia">Historia</a>
+      <a href="#modelo">Modelo Daytop</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contacto">Contacto</a>
+      <!-- Ícono menú móvil -->
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+    </nav>
+  </header>
 
-<p>Bienvenidos.</p>
+  <!-- Sección Portada -->
+  <section id="inicio" class="portada">
+    <div class="overlay"></div>
+    <div class="container text-center">
+      <h1>Bienvenidos a la Asociación Samaritano Ruales</h1>
+      <p>21 años ofreciendo esperanza y transformación con nuestro modelo terapéutico Daytop.</p>
+      <a href="#servicios" class="btn">Conoce Más</a>
+    </div>
+  </section>
 
+  <!-- Sección Quiénes somos -->
+  <section id="quienes">
+    <div class="container">
+      <h2>Quiénes somos</h2>
+      <p>La Asociación Samaritano Ruales es una comunidad terapéutica con 21 años de experiencia...</p>
+      <!-- Más contenido de presentación institucional -->
+    </div>
+  </section>
+
+  <!-- Sección Historia -->
+  <section id="historia" class="bg-light">
+    <div class="container">
+      <h2>Nuestra Historia (21 años)</h2>
+      <p>Desde nuestro inicio en [año], hemos trabajado en...</p>
+      <img src="img/historia.jpg" alt="Historia de Samaritano Ruales">
+    </div>
+  </section>
+
+  <!-- Sección Modelo Daytop -->
+  <section id="modelo">
+    <div class="container">
+      <h2>Modelo Terapéutico Daytop</h2>
+      <p>Adoptamos el modelo Daytop, centrado en la responsabilización y ayuda mutua. Nuestros ejes terapéuticos son...</p>
+    </div>
+  </section>
+
+  <!-- Sección Servicios -->
+  <section id="servicios" class="bg-light">
+    <div class="container">
+      <h2>Servicios</h2>
+      <div class="cards">
+        <div class="card">
+          <img src="img/servicio1.jpg" alt="Terapia Grupales">
+          <h3>Terapias Grupales</h3>
+          <p>Dinámicas y talleres psicológicos de apoyo continuo.</p>
+        </div>
+        <div class="card">
+          <img src="img/servicio2.jpg" alt="Deportes y actividades">
+          <h3>Deportes y Actividades</h3>
+          <p>Rutina diaria con actividades deportivas para fomentar el bienestar físico y mental.</p>
+        </div>
+        <!-- Más tarjetas de servicios -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Galería -->
+  <section id="galeria">
+    <div class="container">
+      <h2>Galería</h2>
+      <div class="gallery">
+        <img src="img/residentes1.jpg" alt="Actividad comunitaria" onclick="openLightbox(this)">
+        <img src="img/residentes2.jpg" alt="Charlas terapéuticas" onclick="openLightbox(this)">
+        <!-- Más miniaturas -->
+      </div>
+      <!-- Lightbox oculto -->
+      <div id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Equipo de trabajo -->
+  <section id="equipo" class="bg-light">
+    <div class="container">
+      <h2>Equipo Profesional</h2>
+      <div class="team">
+        <div class="member">
+          <img src="img/director.jpg" alt="Director">
+          <h4>Dr. Juan Pérez</h4>
+          <p>Director General</p>
+        </div>
+        <!-- Más miembros -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Preguntas Frecuentes -->
+  <section id="faq">
+    <div class="container">
+      <h2>Preguntas Frecuentes</h2>
+      <div class="faq-item">
+        <h4>¿Cómo ingresar a la comunidad terapéutica?</h4>
+        <p>Para más información, contáctanos vía WhatsApp o consulta nuestro formulario de ingreso...</p>
+      </div>
+      <!-- Más FAQs -->
+    </div>
+  </section>
+
+  <!-- Sección Contacto -->
+  <section id="contacto" class="bg-light">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Teléfono: <a href="tel:+51123456789">+51 1234 56789</a></p>
+      <p>Email: <a href="mailto:info@samaritanoruales.org">info@samaritanoruales.org</a></p>
+      <p><a href="https://wa.me/51987654321?text=Hola,%20quiero%20m\u00e1s%20informaci\u00f3n" class="btn-whatsapp">Enviar WhatsApp</a></p>
+      <!-- Mapa embebido (reemplaza con tu dirección real) -->
+      <div class="map">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!..." 
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+      <!-- Formulario de contacto -->
+      <form id="contactForm" action="https://formspree.io/f/tu_form_id" method="POST">
+        <label for="name">Nombre:</label>
+        <input type="text" name="Name" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" name="Email" id="email" required>
+        <label for="message">Mensaje:</label>
+        <textarea name="Message" id="message" rows="4"></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+      <p><a href="pdf/Folleto_Institucional.pdf" target="_blank" class="btn">Ver folleto PDF</a> (también disponible para descargar)</p>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Asociación Samaritano Ruales. Todos los derechos reservados.</p>
+      <p>Siguenos en 
+        <a href="#">Facebook</a>, 
+        <a href="#">Instagram</a>, 
+        <a href="#">YouTube</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
